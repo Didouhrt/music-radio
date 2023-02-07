@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>music radio</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <audio src="https://dl.sndup.net/spts/Super%20rai%20morale.mp3"></audio>
+    <div class="container">
+      <button class="btn prev">
+        <ion-icon name="play-back-outline"></ion-icon>
+      </button>
+      <button onclick="play(this)" class="btn play">
+        <ion-icon name="play-outline"></ion-icon>
+      </button>
+      <button class="btn ne next">
+        <ion-icon name="play-forward-outline"></ion-icon>
+      </button>
+    </div>
+    <script>
+      function play(e) {
+        let myAudio = document.querySelector("audio");
+        myAudio.paused ? myAudio.play() : myAudio.pause();
+        e.classList.toggle("pressed");
+      }
+    </script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
+
+<!-- <script>
+function play(e) {
+let myAudio = document.querySelector("audio");
+myAudio.paused ? myAudio.play() : myAudio.pause();
+e.classList.toggle("pressed");
+}
+</script>
+<script
+type="module"
+src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+></script>
+<script
+nomodule
+src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+></script>
+
+ -->
